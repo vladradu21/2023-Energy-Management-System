@@ -1,0 +1,18 @@
+.image-container {
+  background-image: url('/assets/images/home_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 700px;
+  position: relative;
+  font-size: 22px;
+}
+
+.content {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}

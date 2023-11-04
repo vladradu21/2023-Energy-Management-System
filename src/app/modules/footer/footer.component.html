@@ -1,0 +1,27 @@
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a routerLink="/home" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a class="nav-link px-2 text-muted" (click)="openAboutUsModal()">About</a></li>
+    </ul>
+  </footer>
+</div>
+
+<!-- About Us Modal -->
+<div class="modal fade" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">About Us</h5>
+      </div>
+
+      <div class="modal-body">
+        <p>Introducing our cutting-edge Energy Management System web application! Designed to empower businesses and individuals to take control of their energy consumption, our platform offers a user-friendly and intuitive interface to monitor, analyze, and optimize energy usage. With real-time data insights, smart recommendations, and customizable controls, our web app ensures you make informed decisions to reduce costs, lower your environmental footprint, and achieve greater energy efficiency. Welcome to a brighter, more sustainable future with our Energy Management System web app.</p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="closeAboutUsModal()">Done</button>
+      </div>
+    </div>
+  </div>
+</div>

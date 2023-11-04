@@ -1,0 +1,37 @@
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 col-md-4">
+        <main class="form-signin">
+          <form [formGroup]="loginForm">
+            <div class="text-center mb-4">
+              <img class="mb-4" src="/assets/images/light-bulb.jpg" alt="" width="350" height="350">
+              <h1 class="h3 mb-3 fw-normal">Sign in</h1>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingUsername" placeholder="username" formControlName="username">
+              <label for="floatingUsername">Username</label>
+              <div *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)">
+                <small class="form-text text-danger">Username is required.</small>
+              </div>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+              <label for="floatingPassword">Password</label>
+              <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                <small class="form-text text-danger">Password is required.</small>
+              </div>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-success mb-2" (click)="loginUser()" [disabled]="loginForm.invalid">Login</button>
+            <button class="w-100 btn btn-lg btn-secondary mb-2" routerLink="/register">Register Now</button>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+<app-footer></app-footer>
