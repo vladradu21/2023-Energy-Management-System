@@ -7,3 +7,9 @@ services:
     volumes:
       - "/app/node_modules"
       - ".:/app"
+    networks:
+      - ems-network
+
+networks:
+    ems-network:
+      external: true
