@@ -36,7 +36,6 @@ export class RegisterComponent implements OnInit {
     user.email = this.registerForm.value.email;
     user.firstname = this.registerForm.value.firstname;
     user.lastname = this.registerForm.value.lastname;
-    this.addUserToDeviceMicroservice(user.username);
 
     this.createAccount(user);
     this.router.navigate(['login']);
@@ -46,6 +45,7 @@ export class RegisterComponent implements OnInit {
     this.registerService.registerUser(user).subscribe(
       (data) => {
         console.log(data);
+        this.addUserToDeviceMicroservice(user.username || this.registerForm.value.username);
       }
     )
   }

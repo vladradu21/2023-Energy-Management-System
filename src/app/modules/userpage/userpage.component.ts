@@ -78,7 +78,6 @@ export class UserpageComponent implements OnInit {
   updateDevice(device: any) {
     this.deviceService.update(device).subscribe(
       (data) => {
-        console.log(data);
         this.getUserDevices();
       },
       (error) => {
