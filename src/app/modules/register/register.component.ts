@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
     this.registerService.registerUser(user).subscribe(
       (data) => {
         console.log(data);
-        this.addUserToDeviceMicroservice(user.username || this.registerForm.value.username);
+        //this.addUserToDeviceMicroservice(user.username || this.registerForm.value.username);
       }
     )
   }
