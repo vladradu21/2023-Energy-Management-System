@@ -17,7 +17,7 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) {
     this.um_baseUrl = `http://localhost:${this.um_port}/api/users`;
-    this.dm_baseUrl = `http://localhost:${this.dm_port}/api/devices`;
+    this.dm_baseUrl = `http://localhost:${this.dm_port}/api/users`;
     this.um_admin_baseUrl = `http://localhost:${this.um_port}/api/admin`;
   }
 

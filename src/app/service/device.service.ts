@@ -11,7 +11,7 @@ export class DeviceService {
   dm_baseUrl: string | undefined;
 
   constructor(private httpClient: HttpClient) {
-    this.dm_port = `http://localhost:${this.dm_port}/api/devices`
+    this.dm_baseUrl = `http://localhost:${this.dm_port}/api/devices`
   }
 
   getAll() {
