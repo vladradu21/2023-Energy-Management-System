@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Device } from '../model/Device';
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeviceService {
+  dm_port = `${environment.dm_port}`
+  dm_baseUrl: string | undefined;
 
-  dm_baseUrl: string = 'http://localhost:8081/api/devices';
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+    this.dm_port = `http://localhost:${this.dm_port}/api/devices`
+  }
 
   getAll() {
     let username = localStorage.getItem("username")
