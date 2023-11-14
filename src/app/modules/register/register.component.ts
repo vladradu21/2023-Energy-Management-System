@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { User } from 'src/app/model/User';
-import { RegisterService } from 'src/app/service/register.service';
-import { UserService } from 'src/app/service/user.service';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {User} from 'src/app/model/User';
+import {RegisterService} from 'src/app/service/register.service';
 
 @Component({
   selector: 'app-register',
@@ -16,8 +15,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private router: Router,
               private formBuilder: FormBuilder,
-              private registerService: RegisterService,
-              private userService: UserService) { }
+              private registerService: RegisterService ) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -43,15 +41,6 @@ export class RegisterComponent implements OnInit {
 
   createAccount(user: User) {
     this.registerService.registerUser(user).subscribe(
-      (data) => {
-        console.log(data);
-        //this.addUserToDeviceMicroservice(user.username || this.registerForm.value.username);
-      }
-    )
-  }
-
-  addUserToDeviceMicroservice(username: string) {
-    this.userService.addUserDeviceMicroservice(username).subscribe(
       (data) => {
         console.log(data);
       }

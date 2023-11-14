@@ -77,15 +77,6 @@ export class AdminpageComponent implements OnInit {
         console.log(error);
       }
     )
-
-    // this.userService.removeUserDeviceMicroservice(username).subscribe(
-    //   (data) => {
-    //     console.log(data);
-    //   },
-    //   (error) => {
-    //     console.log(error);
-    //   }
-    // )
   }
 
   openEditUserModal(username : string) {
