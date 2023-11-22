@@ -1,0 +1,13 @@
+<div class="row justify-content-end">
+  <div class="col-3">
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" [class.show]="showNotification" data-delay="2000">
+      <div class="toast-header mr-2">
+        <h4 class="alert-heading">{{ message.title }}</h4>
+        <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close" (click)="hideNotification()"></button>
+      </div>
+      <div class="toast-body">
+        <h5>{{ message.body }}</h5>
+      </div>
+    </div>
+  </div>
+</div>

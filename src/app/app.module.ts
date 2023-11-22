@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserpageComponent } from './modules/userpage/userpage.component';
 import { AdminpageComponent } from './modules/adminpage/adminpage.component';
+import { NotificationComponent } from './modules/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AdminpageComponent } from './modules/adminpage/adminpage.component';
     LoginComponent,
     RegisterComponent,
     UserpageComponent,
-    AdminpageComponent
+    AdminpageComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
