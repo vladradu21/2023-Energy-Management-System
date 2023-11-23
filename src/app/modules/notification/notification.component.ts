@@ -1,4 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-notification',
@@ -12,9 +13,13 @@ export class NotificationComponent {
 
   message: any = {};
   private webSocket: WebSocket;
+  mc_port = `${environment.mc_port}`
+  mc_baseUrl: string | undefined;
+
 
   constructor() {
-    this.webSocket = new WebSocket('ws://localhost:8082/api/ws/notification');
+    this.mc_baseUrl = `ws://localhost:${this.mc_port}/api/ws/notification`;
+    this.webSocket = new WebSocket(this.mc_baseUrl);
     this.webSocket.onmessage = (event) => {
       this.message = JSON.parse(event.data);
       this.showNotification = true;
