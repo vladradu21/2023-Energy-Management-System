@@ -150,5 +150,4 @@ export class UserpageComponent implements OnInit {
     this.addDevice();
     this.closeAddDeviceModal();
   }
-
 }
