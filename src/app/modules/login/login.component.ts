@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/admin']);
         }
       },(error) => {
+        localStorage.clear()
         error.status === 409 ? alert('Invalid username or password') : alert('Server error');
       }
     )
