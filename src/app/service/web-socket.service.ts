@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
 import {ChatMessageDTO} from "../model/ChatMessageDTO";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class WebSocketService {
 
+  chatroom_port = `${environment.cr_port}`
   webSocket: WebSocket;
   chatMessages: ChatMessageDTO[] = [];
+
   constructor() {
-    this.webSocket = new WebSocket('ws://localhost:8084/api/chat');
+    const websocketChatUrl = `ws://localhost:${this.chatroom_port}/api/chat`;
+    this.webSocket = new WebSocket(websocketChatUrl);
   }
 
   public openWebSocket() {
-    this.webSocket = new WebSocket('ws://localhost:8084/api/chat');
-
     this.webSocket.onopen = (event) => {
       console.log('Open: ', event)
     }
