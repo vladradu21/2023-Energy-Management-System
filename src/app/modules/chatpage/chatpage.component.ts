@@ -10,6 +10,7 @@ import {ChatMessageDTO} from "../../model/ChatMessageDTO";
 })
 export class ChatpageComponent implements OnInit, OnDestroy {
 
+  username = localStorage.getItem('username') || '';
   constructor(public webSocketService: WebSocketService) {
   }
 

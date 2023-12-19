@@ -27,7 +27,7 @@
     <form (ngSubmit)="sendMessage(sendForm)" #sendForm="ngForm">
       <div class="chat-send row">
         <div class="col-2">
-            <input type="text" class="form-control" name="user" id="input-user" ngModel>
+          <input type="text" class="form-control" name="user" id="input-user" [(ngModel)]="username" [readonly]="true">
         </div>
 
         <div class="col-8">
