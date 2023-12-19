@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserpageComponent } from './modules/userpage/userpage.component';
 import { AdminpageComponent } from './modules/adminpage/adminpage.component';
 import { NotificationComponent } from './modules/notification/notification.component';
+import { ChatpageComponent } from './modules/chatpage/chatpage.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NotificationComponent } from './modules/notification/notification.compo
     RegisterComponent,
     UserpageComponent,
     AdminpageComponent,
-    NotificationComponent
+    NotificationComponent,
+    ChatpageComponent
   ],
   imports: [
     BrowserModule,
